@@ -1,0 +1,19 @@
+.list {
+  background-color: #e0e4e9;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #273746;
+}
+
+.item:last-child {
+  margin-bottom: 0px;
+}
