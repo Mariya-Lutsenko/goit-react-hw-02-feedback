@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import css from './App.module.css';
 import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+
 
 // 1. Створємо класовий компонент  App, експортуємо його в index.js, рендеримо  розмітку і переконуємося, що вона працює.
 // 2. Робимо стилі контейнера для App.module.css і імпортуємо їх в App, вішаємо на div.
@@ -47,11 +49,8 @@ import Statistics from './Statistics/Statistics';
     return (
       <div className={css.container}>
         <h2>Please leave feedback</h2>
-        <div>
-          <button onClick={()=>this.onLeaveFeedback("good")}>Good</button>
-          <button onClick={()=>this.onLeaveFeedback("neutral")}>Neutral</button>
-          <button onClick={()=>this.onLeaveFeedback("bad")}>Bad</button>
-        </div>
+        <FeedbackOptions options={options} onLeaveFeedback={this.onLeaveFeedback} />
+    
         <h2>Statistics</h2>
         <Statistics
         good = {good}
